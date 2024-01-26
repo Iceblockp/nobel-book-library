@@ -22,7 +22,10 @@ const DetailBookPage = () => {
             <h1>Error</h1>
           ) : (
             <div className=" pb-5 ">
-              <button onClick={handleBack}  className=" mb-10 bg-gradient-to-r from-sky-600 to-blue-600 animate-pulse shadow-blue-200 hover:shadow-[0px_0px_10px_0px] px-2 rounded-lg">
+              <button
+                onClick={handleBack}
+                className=" mb-10 bg-gradient-to-r from-sky-600 to-blue-600 animate-pulse shadow-blue-200 hover:shadow-[0px_0px_10px_0px] px-2 rounded-lg"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -37,20 +40,31 @@ const DetailBookPage = () => {
                 </svg>
               </button>
 
-              <div className=" pb-5 flex justify-center ">
-                <img className=" w-[400px] h-[400px] " src={data.image} alt="something.jpg" />
+              <div className=" px-5 max-w-[400px] flex flex-col items-center justify-center mx-auto py-6 ">
+                <h1 className=" text-2xl text-center font-bold ">
+                  {data.book}
+                </h1>
+                <h2 className=" px-10 text-sm text-gray-500 text-right ">
+                  Author: {data.author}
+                </h2>
               </div>
-              <div className=" px-5">
-                <h1 className=" text-2xl text-center font-bold ">{data.book}</h1>
-                <h2 className=" px-10 text-sm text-gray-500 text-right ">Author: {data.author}</h2>
+              <div className=" pb-5 flex justify-center  ">
+                <img
+                  className=" w-[400px] h-[400px] border-4 border-gray-600 "
+                  src={data.image}
+                  alt="something.jpg"
+                />
               </div>
+
               <div>
                 <p className=" px-10 ">{data.description}</p>
               </div>
               <hr className="mb-3" />
-             
-              <div className=" w-full flex justify-end">
-                <button className=" text-white bg-gray-600 px-2 rounded-lg">Read More</button>
+
+              <div className=" w-full flex justify-end mb-5">
+                <button className=" text-white bg-blue-600 px-4 py-2 rounded-lg">
+                  Read More
+                </button>
               </div>
             </div>
           )}
