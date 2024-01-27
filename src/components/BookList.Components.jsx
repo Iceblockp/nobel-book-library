@@ -5,7 +5,7 @@ const BookListComponents = ({data}) => {
     <div className='w-full group border-b border-gray-500 '>
         <div className=' view relative'>
         <div className=' w-full absolute h-full hover:animate-pulse  shadow-gray-500 group-hover:shadow-[0_0_10px_1px] bg-gradient-to-r from-gray-500 to-gray-200 -z-20 '></div>
-            <img className=' group-hover:book h-[300px] w-[300px] ' src={data.image} alt="something.jpg" />
+            <img className=' border-2 border-gray-500 group-hover:book h-[300px] w-[300px] ' src={data.image} alt="something.jpg" />
             
         </div>
         <div>

@@ -48,23 +48,27 @@ const DetailBookPage = () => {
                   Author: {data.author}
                 </h2>
               </div>
-              <div className=" pb-5 flex justify-center  ">
-                <img
-                  className=" w-[400px] h-[400px] border-4 border-gray-600 "
-                  src={data.image}
-                  alt="something.jpg"
-                />
-              </div>
+              <div className=" grid grid-cols-2 h-full ">
+                <div className=" pb-5 flex justify-center  ">
+                  <img
+                    className="  border-4 border-gray-600 "
+                    src={data.image}
+                    alt="something.jpg"
+                  />
+                </div>
 
-              <div>
-                <p className=" px-10 ">{data.description}</p>
-              </div>
-              <hr className="mb-3" />
+                <div className=" py-4 flex flex-col h-full">
+                  <div>
+                    <p className=" px-10 ">{data.description}</p>
+                  </div>
+                  <hr className="mb-3" />
 
-              <div className=" w-full flex justify-end mb-5">
-                <button className=" text-white bg-blue-600 px-4 py-2 rounded-lg">
-                  Read More
-                </button>
+                  <div className=" w-full flex justify-end mb-5 mt-auto ">
+                    <button className=" text-white bg-blue-600 px-4 py-2 rounded-lg">
+                      Read More
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           )}
